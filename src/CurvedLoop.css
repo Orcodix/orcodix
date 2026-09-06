@@ -1,0 +1,152 @@
+.curved-loop-jacket {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y;
+}
+
+.curved-loop-svg {
+  user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 4.8rem;
+  fill: #111113;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-family: var(--font-satoshi, 'Satoshi', sans-serif);
+}
+
+/* --------------------------------------------------------------------------
+   ORCODIX Agency Curved Loop Section Styling
+   -------------------------------------------------------------------------- */
+
+.curved-loop-section {
+  position: relative;
+  width: 100%;
+  padding: 10px 0 90px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Subtle Interactive Hint Badge */
+.curved-loop-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #767682;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  user-select: none;
+  pointer-events: none;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+}
+
+.curved-loop-hint .hint-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF6A00;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.8);
+}
+
+/* Custom Typography Style Class */
+.orcodix-curved-text {
+  fill: #121215;
+  font-family: var(--font-satoshi, 'Satoshi', -apple-system, sans-serif);
+  font-weight: 850;
+  letter-spacing: -0.03em;
+  transition: fill 0.3s ease;
+}
+
+.orcodix-curved-text:hover {
+  fill: #000000;
+}
+
+/* Ambient glow under the loop */
+.curved-loop-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 240px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 106, 0, 0.08) 0%,
+    rgba(255, 106, 0, 0.02) 50%,
+    transparent 75%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 900px) {
+  .curved-loop-jacket {
+    min-height: 220px;
+  }
+
+  .curved-loop-svg {
+    font-size: 3.6rem;
+  }
+
+  .curved-loop-section {
+    padding: 10px 0 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .curved-loop-jacket {
+    min-height: 170px;
+  }
+
+  .curved-loop-svg {
+    font-size: 2.8rem;
+  }
+
+  .curved-loop-section {
+    padding: 10px 0 50px;
+  }
+}
+
+/* Dark Mode Support for CurvedLoop */
+[data-theme="dark"] .curved-loop-svg,
+[data-theme="dark"] .orcodix-curved-text {
+  fill: #F5F5F7;
+}
+
+[data-theme="dark"] .orcodix-curved-text:hover {
+  fill: #FFFFFF;
+}
+
+[data-theme="dark"] .curved-loop-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 106, 0, 0.16) 0%,
+    rgba(255, 106, 0, 0.04) 50%,
+    transparent 75%
+  );
+  filter: blur(50px);
+}

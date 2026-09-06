@@ -1,0 +1,372 @@
+/* ==========================================================================
+   ORCODIX - Modern High-End Contact Section Styles
+   100% Match to Reference Design (Pill Cards + Beige Form Box)
+   ========================================================================== */
+
+.contact-section-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary, #F7F6F2);
+  color: var(--text-primary, #111111);
+  padding: 130px 24px 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .contact-section-page {
+  background-color: var(--bg-primary, #0D0E11);
+  color: var(--text-primary, #F2F2F0);
+}
+
+.contact-main-container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: HEADLINE, DESCRIPTION & PILL INFO CARDS
+   ========================================================================== */
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-tag-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background-color: #FF5C00;
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 6px 13px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(255, 92, 0, 0.25);
+}
+
+.contact-heading-title {
+  font-size: clamp(2.8rem, 4.4vw, 3.8rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  color: #0E1015;
+  margin: 0 0 18px 0;
+}
+
+[data-theme="dark"] .contact-heading-title {
+  color: #FFFFFF;
+}
+
+.contact-lead-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555A65;
+  margin: 0 0 32px 0;
+  max-width: 480px;
+}
+
+[data-theme="dark"] .contact-lead-desc {
+  color: #9EA3B0;
+}
+
+/* 3 Stacked Rounded Pill Info Cards */
+.contact-info-pills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-info-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ECE8E1;
+  border-radius: 999px;
+  padding: 12px 24px 12px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid transparent;
+}
+
+[data-theme="dark"] .contact-info-pill-item {
+  background: #181B23;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-info-pill-item:hover {
+  transform: translateX(4px);
+  background: #E4DFD6;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .contact-info-pill-item:hover {
+  background: #20242F;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.contact-pill-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0E1015;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+[data-theme="dark"] .contact-pill-icon-box {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.contact-info-pill-item:hover .contact-pill-icon-box {
+  transform: scale(1.05);
+}
+
+.contact-pill-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-pill-title {
+  font-size: 0.96rem;
+  font-weight: 750;
+  color: #0E1015;
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .contact-pill-title {
+  color: #FFFFFF;
+}
+
+.contact-pill-value {
+  font-size: 0.9rem;
+  color: #555A65;
+  font-weight: 450;
+}
+
+[data-theme="dark"] .contact-pill-value {
+  color: #9EA3B0;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: BEIGE CARD WITH 2-COLUMN FORM
+   ========================================================================== */
+.contact-form-column {
+  width: 100%;
+}
+
+.contact-form-box-card {
+  background: #ECE8E1;
+  border-radius: 32px;
+  padding: 40px 38px;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .contact-form-box-card {
+  background: #181B23;
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.contact-grid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.contact-input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-input-field-group.full-width {
+  width: 100%;
+}
+
+.contact-form-label {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #0E1015;
+  letter-spacing: -0.01em;
+}
+
+[data-theme="dark"] .contact-form-label {
+  color: #F0F2F6;
+}
+
+.contact-custom-input,
+.contact-custom-textarea {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-size: 0.95rem;
+  color: #121419;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+[data-theme="dark"] .contact-custom-input,
+[data-theme="dark"] .contact-custom-textarea {
+  background: #101217;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.contact-custom-input::placeholder,
+.contact-custom-textarea::placeholder {
+  color: #9CA1AE;
+  font-weight: 450;
+}
+
+[data-theme="dark"] .contact-custom-input::placeholder,
+[data-theme="dark"] .contact-custom-textarea::placeholder {
+  color: #626775;
+}
+
+.contact-custom-input:focus,
+.contact-custom-textarea:focus {
+  border-color: #FF5C00;
+  box-shadow: 0 0 0 3px rgba(255, 92, 0, 0.18);
+}
+
+[data-theme="dark"] .contact-custom-input:focus,
+[data-theme="dark"] .contact-custom-textarea:focus {
+  border-color: #FF5C00;
+  box-shadow: 0 0 0 3px rgba(255, 92, 0, 0.28);
+}
+
+.contact-custom-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Orange Full-Width Submit Button */
+.contact-submit-row {
+  padding-top: 4px;
+}
+
+.contact-orange-submit-btn {
+  width: 100%;
+  background: #FF5C00;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-size: 1.02rem;
+  font-weight: 750;
+  cursor: pointer;
+  letter-spacing: -0.01em;
+  box-shadow: 0 6px 20px rgba(255, 92, 0, 0.28);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-orange-submit-btn:hover {
+  background: #E85000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 92, 0, 0.4);
+}
+
+.contact-orange-submit-btn:active {
+  transform: translateY(0);
+}
+
+.contact-orange-submit-btn.is-sent {
+  background: #10B981;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Privacy Caption */
+.contact-privacy-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555A65;
+  margin: 0;
+  line-height: 1.5;
+}
+
+[data-theme="dark"] .contact-privacy-caption {
+  color: #8E93A1;
+}
+
+.privacy-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.privacy-link:hover {
+  color: #FF5C00;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 980px) {
+  .contact-section-page {
+    padding: 110px 20px 70px;
+  }
+
+  .contact-main-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-lead-desc {
+    max-width: 100%;
+  }
+
+  .contact-form-box-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-heading-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-form-box-card {
+    padding: 26px 18px;
+    border-radius: 24px;
+  }
+
+  .contact-info-pill-item {
+    border-radius: 20px;
+    padding: 12px 18px;
+  }
+}
